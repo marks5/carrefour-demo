@@ -1,0 +1,36 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.4'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.carrefour.comercial'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation("io.springfox:springfox-boot-starter:3.0.0")
+	implementation("io.springfox:springfox-swagger-ui:3.0.0")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.springframework.boot:spring-boot-starter-hateoas")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-maven-plugin:3.0.5")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	runtimeOnly("com.h2database:h2")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.named('jar') {
+	manifest {
+		attributes["Main-Class"] = "com.carrefour.comercial.demo.DemoApplication"
+	}
+}
