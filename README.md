@@ -6,9 +6,9 @@ Apontar para arquivo DemoApplication e rodar localmente, endereço está como lo
 
 Instruções de consumo de docker
 
-docker build -t tag/tag .
+docker build -t marks/demo .
 
-docker run tag/tag
+docker run marks/demo
 
 Instruções de consumo das APIs
 
