@@ -17,15 +17,3 @@ Instruções de consumo das APIs
 /api/dashboard
 
 /api/transaction
-
-@startuml
-actor Comerciante as Foo1
-entity      Transaction as Foo2
-database    Database    as Foo3
-Foo1 -> Foo2 : Insere debit/credit
-note left: Json vai aqui
-
-Foo2 -> Foo3 : Persiste debit/credit
-Foo3 --> Foo2 : Recebe ok
-Foo2 --> Foo1 : Recebe ok
-@enduml
