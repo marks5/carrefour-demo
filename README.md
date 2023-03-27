@@ -17,6 +17,7 @@ Instruções de consumo das APIs
 /api/dashboard
 
 /api/transaction
+
 @startuml
 actor Comerciante as Foo1
 entity      Transaction as Foo2
