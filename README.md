@@ -2,18 +2,18 @@
 
 ![image](https://user-images.githubusercontent.com/6106197/228066458-6cdb240a-1a1d-4836-99ac-2fe345cf8893.png)
 
-Instruções de local
+# Instruções de local
 
-Apontar para arquivo DemoApplication e rodar localmente, endereço está como localhost e porta 8080.
+Apontar para arquivo DemoApplication e rodar localmente, endereço está como localhost e porta 8080. A aplicação faz uso do h2 database, não e preciso se conectar em nenhum SGBD externo para tanto.
 
-Instruções de consumo de docker
+# Instruções de consumo de docker
 
 docker build -t marks/demo .
 
 docker run marks/demo
 
-Instruções de consumo das APIs
+# Instruções de consumo das APIs
 
-/api/dashboard
+  /api/dashboard
 
-/api/transaction
+  /api/transaction
