@@ -12,7 +12,7 @@ Também é possível rodar com os comandos
 
 ./gradlew bootRun
 
-# Instruções de consumo de docker
+# Instruções de consumo docker
 
 docker build -t marks/demo .
 
