@@ -2,30 +2,28 @@
 
 ![image](https://user-images.githubusercontent.com/6106197/228066458-6cdb240a-1a1d-4836-99ac-2fe345cf8893.png)
 
-Instruções de local
+# Instruções de local
 
-Apontar para arquivo DemoApplication e rodar localmente, endereço está como localhost e porta 8080.
+Apontar para arquivo DemoApplication e rodar localmente, endereço está como localhost e porta 8080. A aplicação faz uso do h2 database, não e preciso se conectar em nenhum SGBD externo para tanto.
 
-Instruções de consumo de docker
+# Instruções de consumo de docker
 
 docker build -t marks/demo .
 
 docker run marks/demo
 
-Instruções de consumo das APIs
+# Instruções de consumo das APIs
 
-/api/dashboard
+  /api/dashboard/debits -> Verifica lista de débitos
+  
+  /api/dashboard/credits -> Verifica lista de créditos
+  
+  /api/dashboard/{data} -> Verifica o balanço do dia
 
-/api/transaction
+  /api/transaction -> Insere um débito ou crédito
 
-@startuml
-actor Comerciante as Foo1
-entity      Transaction as Foo2
-database    Database    as Foo3
-Foo1 -> Foo2 : Insere debit/credit
-note left: Json vai aqui
-
-Foo2 -> Foo3 : Persiste debit/credit
-Foo3 --> Foo2 : Recebe ok
-Foo2 --> Foo1 : Recebe ok
-@enduml
+{
+    "debito":false,
+    "valor":12000.26,
+    "data":"2022-05-29"
+}
