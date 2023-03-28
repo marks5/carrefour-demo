@@ -15,7 +15,7 @@ public class SwaggerConfig {
     @Bean
     public Docket petApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-            .groupName("full-petstore-api")
+            .groupName("carrefour-api")
             .apiInfo(apiInfo())
             .select()
             .paths(any())
