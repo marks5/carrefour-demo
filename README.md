@@ -14,6 +14,8 @@ docker run marks/demo
 
 # Instruções de consumo das APIs
 
+<img width="519" alt="image" src="https://user-images.githubusercontent.com/6106197/228121890-6569fe0c-7629-488b-b342-3367d5127530.png">
+
   /api/dashboard/debits -> Verifica lista de débitos
   
   /api/dashboard/credits -> Verifica lista de créditos
