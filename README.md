@@ -6,6 +6,8 @@
 
 Apontar para arquivo DemoApplication e rodar localmente, endereço está como localhost e porta 8080. A aplicação faz uso do h2 database, não e preciso se conectar em nenhum SGBD externo para tanto.
 
+Também é possível rodar com o comando ./gradlew bootRun
+
 # Instruções de consumo de docker
 
 docker build -t marks/demo .
