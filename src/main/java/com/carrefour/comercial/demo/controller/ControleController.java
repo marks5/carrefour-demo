@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
+import static com.carrefour.comercial.demo.model.DateUtil.getDateWithoutTimeUsingFormat;
+
 @RestController
 @RequestMapping("/api/transaction")
 public class ControleController {
@@ -17,6 +21,12 @@ public class ControleController {
 
     @PostMapping
     public Transaction insert(@RequestBody Transaction transaction) {
+        try {
+            transaction.setData(getDateWithoutTimeUsingFormat());
+        } catch (Exception e) {
+
+        }
+
         return repository.save(transaction);
     }
 }
