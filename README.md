@@ -14,6 +14,16 @@ docker run marks/demo
 
 # Instruções de consumo das APIs
 
-  /api/dashboard
+  /api/dashboard/debits -> Verifica lista de débitos
+  
+  /api/dashboard/credits -> Verifica lista de créditos
+  
+  /api/dashboard/{data} -> Verifica o balanço do dia
 
-  /api/transaction
+  /api/transaction -> Insere um débito ou crédito
+
+{
+    "debito":false,
+    "valor":12000.26,
+    "data":"2022-05-29"
+}
