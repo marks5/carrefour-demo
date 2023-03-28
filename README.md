@@ -6,7 +6,11 @@
 
 Apontar para arquivo DemoApplication e rodar localmente, endereço está como localhost e porta 8080. A aplicação faz uso do h2 database, não e preciso se conectar em nenhum SGBD externo para tanto.
 
-Também é possível rodar com o comando ./gradlew bootRun
+Também é possível rodar com os comandos
+
+./gradlew build
+
+./gradlew bootRun
 
 # Instruções de consumo de docker
 
@@ -25,9 +29,3 @@ docker run marks/demo
   /api/dashboard/{data} -> Verifica o balanço do dia
 
   /api/transaction -> Insere um débito ou crédito
-
-{
-    "debito":false,
-    "valor":12000.26,
-    "data":"2022-05-29"
-}
