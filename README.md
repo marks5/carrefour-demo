@@ -16,7 +16,7 @@ Também é possível rodar com os comandos
 
 docker build -t marks/demo .
 
-docker run marks/demo
+docker run -p 8080:8080 marks/demo
 
 # Instruções de consumo das APIs
 
