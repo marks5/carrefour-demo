@@ -39,3 +39,11 @@ O valor é um double e o débito/crédito é um booleano.
     "debito":true, 
     "valor":12000.00
 }
+
+<img width="596" alt="image" src="https://user-images.githubusercontent.com/6106197/228395211-a3d21d9f-4364-4053-991d-367314262f6e.png">
+
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/6106197/228395265-a4b22a42-9c20-4000-b368-509366856f95.png">
+
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/6106197/228395308-28f5838e-bf22-4b57-897e-975ccd48165f.png">
+
+
