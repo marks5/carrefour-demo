@@ -16,16 +16,34 @@ Também é possível rodar com os comandos
 
 docker build -t marks/demo .
 
-docker run marks/demo
+docker run -p 8080:8080 marks/demo
 
 # Instruções de consumo das APIs
 
-<img width="519" alt="image" src="https://user-images.githubusercontent.com/6106197/228121890-6569fe0c-7629-488b-b342-3367d5127530.png">
+![image](https://user-images.githubusercontent.com/6106197/228394664-1b67d46e-1c04-4af0-9893-7b3e9d30d683.png)
 
   /api/dashboard/debits -> Verifica lista de débitos
   
   /api/dashboard/credits -> Verifica lista de créditos
   
-  /api/dashboard/{data} -> Verifica o balanço do dia
+  /api/dashboard/consolidated -> Verifica o balanço do dia debits - credits dado dia atual
 
-  /api/transaction -> Insere um débito ou crédito
+  /api/dashboard/consolidated/by?data=yyyy-MM-dd -> Verifica o balanço do dia correspondendo a data específica yyyy-MM-dd
+
+  /api/transaction -> Insere um débito ou crédito por post no body 
+
+// Sendo true define como débito, sendo falso define como crédito, claro que podemos melhorar isso criando duas tabelas a fim de melhorar o desempenho mas escolhi assim por se tratar de uma definiçao simplória.
+O valor é um double e o débito/crédito é um booleano.
+
+{
+    "debito":true, 
+    "valor":12000.00
+}
+
+<img width="596" alt="image" src="https://user-images.githubusercontent.com/6106197/228395211-a3d21d9f-4364-4053-991d-367314262f6e.png">
+
+<img width="542" alt="image" src="https://user-images.githubusercontent.com/6106197/228395265-a4b22a42-9c20-4000-b368-509366856f95.png">
+
+<img width="544" alt="image" src="https://user-images.githubusercontent.com/6106197/228395308-28f5838e-bf22-4b57-897e-975ccd48165f.png">
+
+
