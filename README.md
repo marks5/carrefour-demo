@@ -26,6 +26,6 @@ docker run marks/demo
   
   /api/dashboard/credits -> Verifica lista de créditos
   
-  /api/dashboard/{data} -> Verifica o balanço do dia
+  /api/dashboard/consolidated -> Verifica o balanço do dia debits - credits dado dia atual
 
   /api/transaction -> Insere um débito ou crédito
