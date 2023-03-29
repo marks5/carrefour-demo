@@ -20,7 +20,7 @@ docker run -p 8080:8080 marks/demo
 
 # Instruções de consumo das APIs
 
-<img width="564" alt="image" src="https://user-images.githubusercontent.com/6106197/228393391-45fd8588-4c36-4e99-b22b-f774f5d6476d.png">
+![image](https://user-images.githubusercontent.com/6106197/228394664-1b67d46e-1c04-4af0-9893-7b3e9d30d683.png)
 
   /api/dashboard/debits -> Verifica lista de débitos
   
@@ -28,4 +28,14 @@ docker run -p 8080:8080 marks/demo
   
   /api/dashboard/consolidated -> Verifica o balanço do dia debits - credits dado dia atual
 
-  /api/transaction -> Insere um débito ou crédito
+  /api/dashboard/consolidated/by?data=yyyy-MM-dd -> Verifica o balanço do dia correspondendo a data específica yyyy-MM-dd
+
+  /api/transaction -> Insere um débito ou crédito por post no body 
+
+// Sendo true define como débito, sendo falso define como crédito, claro que podemos melhorar isso criando duas tabelas a fim de melhorar o desempenho mas escolhi assim por se tratar de uma definiçao simplória.
+O valor é um double e o débito/crédito é um booleano.
+
+{
+    "debito":true, 
+    "valor":12000.00
+}
