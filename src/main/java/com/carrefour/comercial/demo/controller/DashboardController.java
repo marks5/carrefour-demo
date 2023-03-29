@@ -31,9 +31,28 @@ public class DashboardController {
     }
 
     @GetMapping("/consolidated")
-    public ConsolidatedTransaction getConsolidatedByDate() {
+    public ConsolidatedTransaction getConsolidated() {
         try{
             List<Transaction> transaction = repository.findAllByData(getDateWithoutTimeUsingFormat());
+            Double value = 0.0;
+            for (Transaction i : transaction) {
+                if (i.getDebito()) {
+                    value += i.getValor();
+                } else value -= i.getValor();
+            }
+            ConsolidatedTransaction consolidatedTransaction = new ConsolidatedTransaction();
+            consolidatedTransaction.setData(getDateWithoutTimeUsingFormat());
+            consolidatedTransaction.setValor(value);
+            return consolidatedTransaction;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    @GetMapping("/consolidated/by")
+    public ConsolidatedTransaction getConsolidatedByDate(@RequestParam("data") Date date) {
+        try{
+            List<Transaction> transaction = repository.findAllByData(getDateWithoutTimeUsingFormat(date));
             Double value = 0.0;
             for (Transaction i : transaction) {
                 if (i.getDebito()) {

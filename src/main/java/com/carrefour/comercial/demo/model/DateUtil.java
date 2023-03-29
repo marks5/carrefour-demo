@@ -11,4 +11,11 @@ public class DateUtil {
                 "dd/MM/yyyy");
         return formatter.parse(formatter.format(new Date()));
     }
+
+    public static Date getDateWithoutTimeUsingFormat(Date date)
+            throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat(
+                "dd/MM/yyyy");
+        return formatter.parse(formatter.format(date));
+    }
 }
